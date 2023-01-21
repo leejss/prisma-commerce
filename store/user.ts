@@ -7,7 +7,7 @@ interface UserStore {
   reset: () => void;
 }
 
-const userStore = create<UserStore>((set) => ({
+const useUserStore = create<UserStore>((set) => ({
   user: null,
   setUser: (user) =>
     set((state) => ({
@@ -21,4 +21,4 @@ const userStore = create<UserStore>((set) => ({
     })),
 }));
 
-export default userStore;
+export default useUserStore;

@@ -2,14 +2,14 @@ import { Formik } from "formik";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import login from "../api/login";
-import userStore from "../store/user";
+import useUserStore from "../store/user";
 import Button from "./ui/Button";
 import Input from "./ui/Input";
 
 const LoginForm = () => {
   const router = useRouter();
   const [errorMsg, setErrorMsg] = useState<null | string>(null);
-  const setUser = userStore((state) => state.setUser);
+  const setUser = useUserStore((state) => state.setUser);
   return (
     <div className="flex flex-col gap-4">
       <Formik

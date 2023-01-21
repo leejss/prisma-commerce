@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
-import userStore from "../store/user";
+import useUserStore from "../store/user";
 import Button from "./ui/Button";
 
 const AuthButton = () => {
-  const store = userStore();
+  const store = useUserStore();
   const router = useRouter();
   const handleClick = () => {
     if (store.user) {
